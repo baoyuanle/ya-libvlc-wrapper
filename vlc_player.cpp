@@ -1,4 +1,4 @@
-/*******************************************************************************
+﻿/*******************************************************************************
 * Copyright © 2013-2015, Sergey Radionov <rsatom_gmail.com>
 * All rights reserved.
 *
@@ -85,6 +85,16 @@ void player_core::togglePause()
 void player_core::stop()
 {
     _player.stop();
+}
+
+void player_core::set_speed(float fSpeed)
+{
+    _player.set_speed(fSpeed);
+}
+
+float player_core::get_speed()
+{
+    return _player.get_speed();
 }
 
 void player_core::event_proxy( const libvlc_event_t* e, void* param )

@@ -1,4 +1,4 @@
-/*******************************************************************************
+﻿/*******************************************************************************
 * Copyright © 2013-2015, Sergey Radionov <rsatom_gmail.com>
 * All rights reserved.
 *
@@ -89,6 +89,20 @@ void basic_player::play()
 {
     if( is_open() )
         libvlc_media_player_play( _mp );
+}
+
+void basic_player::set_speed(float fSpeed)
+{
+    if( is_open() )
+        libvlc_media_player_set_rate( _mp, fSpeed );
+}
+
+float basic_player::get_speed()
+{
+    float speed=1.0f;
+    if( is_open() )
+        speed = libvlc_media_player_get_rate( _mp );
+    return speed;
 }
 
 void basic_player::pause()

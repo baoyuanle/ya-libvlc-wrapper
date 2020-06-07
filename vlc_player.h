@@ -1,4 +1,4 @@
-/*******************************************************************************
+﻿/*******************************************************************************
 * Copyright © 2013-2015, Sergey Radionov <rsatom_gmail.com>
 * All rights reserved.
 *
@@ -76,6 +76,8 @@ namespace vlc
         void pause();
         void togglePause();
         void stop();
+        void set_speed(float fSpeed);
+        float get_speed();
 
         vlc::basic_player& basic_player() { return _player; }
 
